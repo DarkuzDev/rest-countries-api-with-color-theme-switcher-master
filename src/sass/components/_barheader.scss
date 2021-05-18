@@ -1,0 +1,21 @@
+
+.headerbar {
+    padding: 1.5rem 0;
+    background-color: $white;
+    border-bottom: 3px solid darken($very-light-gray, 5);
+ }
+
+ .dark-mode .headerbar {
+     background-color: $dark-blue;
+     border-bottom: 3px solid darken($dark-blue, 6);
+     color: $white;
+ }
+
+ .headerbar h1 {
+     font-size: 1.8rem;
+ }
+
+ .headerbar__content {
+    display: flex;
+    justify-content: space-between;
+ }

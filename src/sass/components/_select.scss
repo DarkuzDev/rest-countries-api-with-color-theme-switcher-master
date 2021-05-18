@@ -1,0 +1,36 @@
+
+.filterContinents {
+    margin-top: 3rem;
+    width: 20rem;
+}
+
+select {
+    width: 20rem;
+    padding: 2rem 1.5rem;
+    background-color: $white;
+
+    border: none;
+    border-radius: 3px;
+
+    outline: none;
+    box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, .2);
+
+    cursor: pointer;
+    color: $very-dark-blue2;
+}
+
+.dark-mode select {
+    color: $white;
+
+    background-color: $dark-blue;
+}
+
+option {
+    margin-top: 1rem;
+    border: none;
+    color: $very-dark-blue2;
+}
+
+.dark-mode option {
+    color: $white;
+}

@@ -1,0 +1,82 @@
+
+.button__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-bottom: 2rem;
+}
+
+.btn {
+    text-align: center;
+    padding: .8rem 1.5rem;
+    margin: .5rem .8rem;
+    border: none;
+    background-color: $white;
+    font-size: 1.5rem;
+    box-shadow: .1rem .1rem 1rem rgba(0, 0, 0, .2);
+    color: $very-dark-blue2;
+    text-decoration: none;
+    border-radius: 3px;
+
+    transition: background-color .1s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken($white, 5);
+    }
+
+    i {
+        padding-right: 1rem;
+    }
+}
+
+.dark-mode .btn {
+    background-color: $dark-blue;
+    color: $white;
+
+    transition: background-color .1s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: lighten($dark-blue, 5);
+    }
+} 
+
+.btn-secondary {
+    margin: 1rem 0;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: .4rem .7rem;
+}
+
+.btn-tertiary {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+
+    i {
+        margin-right: .5rem;
+        font-weight: 300;
+    }
+
+    &:hover {
+        background-color: $white;
+    }
+}
+
+.dark-mode .btn-tertiary {
+    color: $white;
+
+    & i {
+        font-weight: 800;
+    }
+
+    &:hover {
+        background-color: $dark-blue;
+    }
+}

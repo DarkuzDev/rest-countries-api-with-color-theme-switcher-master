@@ -1,0 +1,69 @@
+
+.form-container {
+    
+}
+
+.form__input {
+    margin-top: 4rem;
+    position: relative;
+}
+
+.form__input i {
+    position: absolute;
+    top: 50%;
+    left: 12%;
+
+    transform: translateY(-50%);
+
+    font-size: 2rem;
+
+    color: lighten($dark-gray, 25);
+
+    @include respond(tab-port) {
+        left: 5%;
+    }
+}
+
+.dark-mode .form__input i {
+    color: white;
+}
+
+.form__input--country {
+    padding: 2rem 2rem 2rem 10rem;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    box-shadow: .1rem .1rem .5rem rgba(0, 0, 0, .2);
+
+    color: $dark-gray;
+
+    outline: inherit;
+
+    &::placeholder {
+        color: darken(rgb(223, 223, 223), 20);
+    }
+
+    @include respond(tab-port) {
+        width: 45rem;
+    }
+}
+
+.dark-mode .form__input--country {
+    background-color: $dark-blue;
+    color: $white;
+
+    &::placeholder {
+        color: $white;
+    }
+}
+
+.header-items {
+
+    @include respond(tab-port) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
