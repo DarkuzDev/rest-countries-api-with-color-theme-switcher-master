@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Redirect } from 'react-router';
 import { numberWithCommas } from '../../helpers/numberWithComas';
 import { useFetch } from '../../hooks/useFetch';
 import { CountryBorderButtom } from './CountryBorderButtom';
@@ -19,10 +18,6 @@ export const CountryDetailsInfo = ({
     borders
  }) => {
 
-    const handleButtonGoBack = () => {
-        <Redirect to="./" />
-    }
-
     let url = 'https://restcountries.eu/rest/v2/alpha?codes=';
 
     for(let i = 0; i < borders.length; i++) {
@@ -40,13 +35,6 @@ export const CountryDetailsInfo = ({
 
     return (
         <div className="country__details container">
-            <button 
-                className="btn btn-primary"
-                onClick={ handleButtonGoBack }
-            >
-            <i className="fas fa-arrow-left"></i> Back
-            </button>
-
             <div className="country__details--container">
                 <div className="country__details--img">
                     <img src={ flag } alt={ name } />
@@ -98,7 +86,9 @@ export const CountryDetailsInfo = ({
                             </div>
                             </>
                             :
-                            <></>
+                            <div className="country__secondary--content">
+                                <p><span>Info: </span> This country doesn't have a border country </p>
+                            </div>
 
                         }
                     </div>
